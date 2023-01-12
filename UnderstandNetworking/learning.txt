@@ -1,0 +1,67 @@
+SECTION - 3
+
+1. What is a network?
+--> Social media network
+--> A computer network --> Digital telecommunications
+Why do we need a computer network? --> Share resources between nodes
+nodes --> computing devices --> files, share a printer (an end device),...
+Share resources using Data-Link (media) --> Fiber optic cable, Wifi,...
+Sneakernet (Floppy disk, USB - Universal Serial Bus,...)
+
+2. Most basic type of network
+Internet (Networks...)
+--> Copper Ethernet Cable
+--> UTP --> Unshielded Twisted Pair copper cable --> RJ45 Connector
+Computer --> Network Interface Card --> RJ45 <-- NIC <-- PC
+Network Interface Card (NIC) has MAC address (Media Access Control address)
+--> A MAC address (A Media Access Control address) \
+is a unique identifier assigned to a Network Interface Controller (NIC) \
+for use as a network address in communications within a network segment
+NIC and Wireless NIC
+10base5 --> 10base2 --> RJ45
+Adapter (convert port)
+---------[]
+Cat5e Ethernet cabling UTP - RJ45 Connector
+Use Wifi to share file (Wifi in this context is medium or media)
+--> Airdrop creates its own Wifi network that allows two devices \
+to share files without the need for any other Wifi networks
+
+3. A bit of networking history
+Ethernet starts with 10base5 --> bus network or bus topology
+device --> data --> medium --> data --> device
+Cat = Category of cable --> In general, higher numbers represent faster speeds \
+and higher frequencies, measured Mhz
+thinnet v/s thicknet
+phone has built-in Wireless NIC
+
+4. Servers, Clients, Ports and Protocols
+Why we need a network? Share resources between nodes
+--> Client - Server model
+--> Server --> provides a service or functionality to clients \
+in what's called a client - server model
+--> Client accesses a service provided by a server, \
+typically, the server is a different computer or different computing device \
+to the client across a network
+==> So we are going to access a service hosted by a server across a network
+--> Server --> Distributed server for handling milliions of requests
+--> Server will be listening on different port numbers for different protocols
+--> Protocols --> Basically a set of rules (a set of conventions) \
+used for communication between devices
+--> HTTP: Hypertext Transfer Protocol --> uses Port 80
+--> HTTPS: Hypertext TransferProtocol Secure --> uses Port 443
+--> FTP: File Transfer Protocol --> uses Port 21 (and 20)
+--> Server can run multiple services and provide multiple services to clients \
+in client - sever model
+http is the protocol.
+--> A port is like an application on the server, so if you want to access \
+this certain application, you have to request its protocol,
+--> There are often many ports are opened on one server, \
+each port is associated with a specific service on the server.
+--> http://example.com:80
+:// is just syntax.
+example.com is the domain.
+example is the domain name.
+.  is just syntax too.
+com  is the top-level domain.
+:  is just syntax too.
+80 is the port number.
