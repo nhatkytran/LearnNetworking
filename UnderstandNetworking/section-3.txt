@@ -118,7 +118,7 @@ an IP address
 --> MAC addresses: 0003.E435.C7DE or 11.22.11.22.11.22 --> Twelve hexadecimal numbers
 --> MAC addresses are recognizable by hyphens, colons, or without a separator
 --> [11-22-33]-[44-55-66]
---> The first 3 bytes identify the munufacturer of the Network Interface Card (NIC)
+--> The first 3 bytes identify the manufacturer of the Network Interface Card (NIC)
 --> The last 3 bytes are a unique number from the manufacturer \
 that identifies each device on a network
 
@@ -129,6 +129,7 @@ that identifies each device on a network
 --> The purpose of the MAC address?
 --> The purpose of the MAC address is so network devices \
 can communicate with each other
+
 --> If devices talk to each other using the MAC address. \
 What is the purpose of an IP address?
 
@@ -138,6 +139,12 @@ What is the purpose of an IP address?
 + It's an identifier for a computer or device on a network
 + Every device has to have an IP address for communication purposes
 + Consists of 2 parts: A network address and A host address
+--> 192.168.1.0 --> 192.168 --> A network address
++ The Network address identifies the specific network to which host is attached, \
+and Host address uniquely identifies a host within a network
++ The distinction is important because router routes the packet according to \
+a network address and don't care about host address
+
 + 2 types: IPv4 & IPv6
 --> === IPv4 ===
 + IPv4 is the current version (not for long) of IP addresses
@@ -157,7 +164,40 @@ What is the purpose of an IP address?
 --> Binary format of IPv6 --> 8 Octets --> 16 bit --> Add up to 128 bit
 --> Each hexadecimal character represents 4 bit
 
---> MAC address explained, Public IP address v/s Private IP address
+--> Public IP address v/s Private IP address
+--> Two different types of IPv4 addresses: Public & Private
++++ Public IPv4 +++
+--> Order Internet Service from Internet Service Provider, \
+they are going to assign your modem or your router in your home or your business \
+a public IP address
+--> Public IP address is registered on the Internet --> gives access to the WWW
+--> Public IP addresses are unique
++++ Private IPv4 +++
+--> IPv4 --> IP addresses not enough --> Engineers developed private IP addresses
+--> Private IP address are not publicly registerd on the Internet \
+--> You can't access the Internet using private IP address
+
+PC (private IP address) <-----> Router (Public IP address) <-----> Internet
+
+--> Private IP addresses are only used internally (home, business, etc)
+--> DHCP is a service in routers to assign private IPs
+--> NAT (Network Address Translation) --> is what translates a set of IP addresses \
+to another set of IP addresses
+--> Private IP address has 3 classes
+--> Class --- IP address range --- Default subnet mask
++ A --- 10.0.0.0 - 10.255.255.255 --- 255.0.0.0 --> Large Organization
++ B --- 172.16.0.0 - 172.31.255.255 --- 255.255.0.0 --> Medium Organization
++ C --- 192.168.0.0 - 192.168.255.255 --- 255.255.255.0 --> Small Organization or Home
+
+--> Public IP address v/s Private IP address
++ Unique >< Non-unique. Can be used on other private networks
++ Publicly registere on the Internet >< Not publicly registered
++ Used externally >< Used internally
++ Assigned by an ISP >< Assign by a router
++ Not free >< Free
++ Not secure >< Secure
+
+--> VPN
 
 --> Practice --> Change MAC address --> 0001.1111.1111 & 0001.2222.2222
 
