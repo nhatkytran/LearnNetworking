@@ -2,6 +2,7 @@
 
 --> Social media network
 --> A computer network --> Digital telecommunications
+--> A network is just a computers connected to each other to exchange information
 Why do we need a computer network? --> Share resources between nodes
 nodes --> computing devices --> files, share a printer (an end device),...
 Share resources using Data-Link (media) --> Fiber optic cable, Wifi,...
@@ -128,7 +129,7 @@ in what's called a client - server model
 typically, the server is a different computer or different computing device \
 to the client across a network
 ==> So we are going to access a service hosted by a server across a network
---> Server --> Distributed server for handling milliions of requests
+--> Server --> Distributed server for handling millions of requests
 --> A CDN - Content Delivery Network is a group of geographically distributed servers \
 that speed up the delivery of web content by bringing it closer to where users are.
 
@@ -156,6 +157,23 @@ com  is the top-level domain.
 
 5. Practical Demonstration using Packet Tracer
 
+--> Hub - Switch - Router
+
+--> Hubs and Switches are used to exchange data within a local area network \
+--> Not used to exchange data outside their own network \
+Hub --> Only detects that a device is physically connected to it
+Switch \
++ Can detect specific devices that are connected to it
++ Keeps a record of the MAC addresses of those devices --> Understand why we need MAC address
+--> To exchange data outside their own network, a device \
+needs to be able to read IP addresses --> A Router comes into play
+
+--> Router --> A device that routes or forwards data from one network to another based on IP address
+--> When a data packet is received from the router, the router inspects the data's IP address \
+and determines if the packet was meant for its own network or if it's meant for another network
+--> Receive data packet or send it off to another network
+--> So a router is essentially the gateway of a network
+
 --> Default Gateway
 --> What is a Default Gateway? \
 --> Simply put, a Default Gateway is a device that forwards data \
@@ -166,6 +184,51 @@ Computers <--> Switch <---> Router (Default Gateway) <--> Internet
 --> A Default Gateway lets devices from one network communicate with devices on another network
 --> "Default" means that designated device is the first option \
 that's looked upon when data needs to exit network
+
+--> Communicate on the same network --> Just talk directly
+--> Communicate on different network --> Go through Default Gateway
+--> IP Address and Subnet Mask come into play
+
+--> A Subnet Mask reveals how many bits in the IP address are used for the network \
+by masking the network portion of the IP address
+
+--> Check if computers on the same network using IP address & Subnet Mask
+--> Send an ARP broadcast out on the network to get MAC address \
++ Same network --> MAC address of computer - of host
++ Different network --> MAC address of Default Gateway
+
+--> ARP - Address Resolution Protocol
+--> Address Resolution Protocol - ARP used to resolve IP addresses to MAC addresses
+--> The MAC address is a physical address of a device. It's a globally unique number \
+that is assigned to every Network Interface Card. Whenever a device needs to communicate \
+with another device on a local area network, it needs the MAC address for that device
+
+--> LAN - WAN - SUBNET
+--> Network? --> A network is just a computers connected to each other to exchange information
+--> Now the most common way for computers connect to each other is by using Switch
+--> Switch? --> A switch is a central wiring point with multiple ports \
+so that two or more computers can connect to each other to create a network
+
+  Computers <--> Switch    <-->  Gateway (Modem/Router)           <-->  Internet
+[LAN - Local Area Network]      [ISP - Internet Service Provider]      [WAN - Wide Area Network]
+
+--> LAN --> Local Area Network
+--> LAN is a private network. It's a type of network like inside of a bulding (home, business, organization). \
+So right now the computers in this network can only talk and exchange data with each other
+--> Gateway --> Gateway is a modem, router combo
+--> WAN --> Wide Area Network
+--> A Wide Area Network is a large network of millions of computers \
+that spans over a large geographical area (country, continent or even the entire globe) --> Internet
+--> Subnet --> Subnetwork --> A division of a bigger network
+--> Router --> Doorway or Gateway --> Devides or separates a network from another network
+--> Reasons for creating subnets \
++ Manageability
++ Security
++ Performance
+
+--> LAN - WAN - CAN - PAN - MAN - SAN
+
+--> VLAN
 
 --> Subnet Mask
 --> IP address consists of 2 parts \
