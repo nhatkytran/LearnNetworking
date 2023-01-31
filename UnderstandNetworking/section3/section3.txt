@@ -174,6 +174,18 @@ and determines if the packet was meant for its own network or if it's meant for 
 --> Receive data packet or send it off to another network
 --> So a router is essentially the gateway of a network
 
+--> Hubs and Switches are used to create networks while Routers are used to connect networks
+
+--> Modem is what brings the Internet into your home or business
+--> A modem establishes and maintains a dedicated connection to your ISP to give you access to the Internet
+--> Why do we need a modem? --> Two different types of signals that are used on a computer and on the Internet
+--> A computer only reads digital signals, while signals out on the Internet are analog
+          <-- Digital      [Demodulate]  <-- Analog
+Computer                      Modem                   Internet
+          --> Digital      [Modulate]    --> Analog
+--> Modem demodulates incoming analog signals into digital signal
+--> Modem modulates outgoing digital signals into analog signal
+
 --> Default Gateway
 --> What is a Default Gateway? \
 --> Simply put, a Default Gateway is a device that forwards data \
