@@ -157,8 +157,9 @@ com  is the top-level domain.
 
 5. Practical Demonstration using Packet Tracer
 
---> LAN - WAN - SUBNET
---> Network? --> A network is just a computers connected to each other to exchange information
++++ LAN - WAN - SUBNET +++
+
+--> Network? --> A network is just computers connected to each other to exchange information
 --> Now the most common way for computers connect to each other is by using Switch
 --> Switch? --> A switch is a central wiring point with multiple ports \
 so that two or more computers can connect to each other to create a network
@@ -169,16 +170,44 @@ so that two or more computers can connect to each other to create a network
 --> LAN --> Local Area Network
 --> LAN is a private network. It's a type of network like inside of a bulding (home, business, organization). \
 So right now the computers in this network can only talk and exchange data with each other
+
 --> Gateway --> Gateway is a modem, router combo
+
 --> WAN --> Wide Area Network
 --> A Wide Area Network is a large network of millions of computers \
 that spans over a large geographical area (country, continent or even the entire globe) --> Internet
+
 --> Subnet --> Subnetwork --> A division of a bigger network
 --> Router --> Doorway or Gateway --> Devides or separates a network from another network
 --> Reasons for creating subnets \
 + Manageability
 + Security
 + Performance
+
++++ VLAN +++
+
+--> VLAN --> Virtual Local Area Network
+--> In a VLAN, the computers, servers, and other network devices are logically connected \
+regardless of their physical location
+--> VLANs --> VLAN capable switch can logically create several virtual networks \
+to separate the network broadcast traffic
++ Improved security
++ Traffic management
++ Make a network simpler
+
++++ Subnets v/s VLAN +++
+
+--> Subnets and VLANs are used to separate or break down a network into smaller network
++ Manageability
++ Security
++ Performance
+--> Subnets separate networks physically
+--> VLANs separate networks virtually
+
+--> Subnet
++ Subnet stands for subnetwork
++ A subnetwork is a smaller network within a larger network
++ Subnets are created by using routers
 
 --> LAN - WAN - CAN - PAN - MAN - SAN \
 --> PAN --> Personal Area Network --> Phones, Tablets, Desktops --> Bluetooth
@@ -187,11 +216,7 @@ that spans over a large geographical area (country, continent or even the entire
 --> MAN --> Metropolitan Area Network
 --> SAN --> Storage Area Network
 
---> VLAN --> Virtual Local Area Network
---> VLANs --> VLANs --> VLAN switch can logically create several virtual networks \
-to separate the network broadcast traffic
-
---> Hub - Switch - Router 
++++ Hub - Switch - Router +++
 
 --> Hubs and Switches are used to exchange data within a local area network \
 --> Not used to exchange data outside their own network \
