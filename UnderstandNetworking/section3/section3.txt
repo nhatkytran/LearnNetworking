@@ -187,13 +187,13 @@ that spans over a large geographical area (country, continent or even the entire
 +++ VLAN +++
 
 --> VLAN --> Virtual Local Area Network
---> In a VLAN, the computers, servers, and other network devices are logically connected \
-regardless of their physical location
---> VLANs --> VLAN capable switch can logically create several virtual networks \
+--> VLANs --> VLAN enabled switch can logically create several virtual networks \
 to separate the network broadcast traffic
 + Improved security
 + Traffic management
 + Make a network simpler
+--> In a VLAN, the computers, servers, and other network devices are logically connected \
+regardless of their physical location
 
 +++ Subnets v/s VLAN +++
 
@@ -209,12 +209,22 @@ to separate the network broadcast traffic
 + A subnetwork is a smaller network within a larger network
 + Subnets are created by using routers
 
---> LAN - WAN - CAN - PAN - MAN - SAN \
+[Computers <--> Switch] --> Broadcast domain
+
+--> VLAN
++ VLAN are created on a VLAN enabled switch
++ The ports on a VLAN switch can be configured to separate network traffic
+
++++ LAN - WAN - CAN - PAN - MAN - SAN +++
+
 --> PAN --> Personal Area Network --> Phones, Tablets, Desktops --> Bluetooth
 --> WLAN --> Wireless Local Area Network --> is a LAN but with out using cables
 --> CAN --> Campus Area Network --> A network that joins 2 or more LANs together within a limited area
 --> MAN --> Metropolitan Area Network
 --> SAN --> Storage Area Network
+
+--> The most common type of LAN is an Ethernet LAN where two or more computers \
+are connected to Ethernet cables using a Switch
 
 +++ Hub - Switch - Router +++
 
