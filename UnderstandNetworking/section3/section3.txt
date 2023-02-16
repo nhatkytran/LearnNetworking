@@ -228,12 +228,13 @@ are connected to Ethernet cables using a Switch
 
 +++ Hub - Switch - Router +++
 
---> Hubs and Switches are used to exchange data within a local area network \
---> Not used to exchange data outside their own network \
+--> Hubs and Switches are used to exchange data within a local area network
+
 Hub --> Only detects that a device is physically connected to it
-Switch \
+Switch
 + Can detect specific devices that are connected to it
-+ Keeps a record of the MAC addresses of those devices --> Understand why we need MAC address
++ Keeps a record of the MAC addresses of those devices
+
 --> To exchange data outside their own network, a device \
 needs to be able to read IP addresses --> A Router comes into play
 
@@ -241,12 +242,16 @@ needs to be able to read IP addresses --> A Router comes into play
 --> When a data packet is received from the router, the router inspects the data's IP address \
 and determines if the packet was meant for its own network or if it's meant for another network
 --> Receive data packet or send it off to another network
---> So a router is essentially the gateway of a network
+--> Router is essentially the gateway of a network
 
---> Hubs and Switches are used to create networks while Routers are used to connect networks
+--> Hubs and Switches are used to create networks while Routers are used to connect network
+
++++ Modem +++
 
 --> Modem is what brings the Internet into your home or business
+
 --> A modem establishes and maintains a dedicated connection to your ISP to give you access to the Internet
+
 --> Why do we need a modem? --> Two different types of signals that are used on a computer and on the Internet
 --> A computer only reads digital signals, while signals out on the Internet are analog
           <-- Digital      [Demodulate]  <-- Analog
@@ -255,7 +260,7 @@ Computer                      Modem                   Internet
 --> Modem demodulates incoming analog signals into digital signal
 --> Modem modulates outgoing digital signals into analog signal
 
---> Default Gateway
++++ Default Gateway +++
 --> What is a Default Gateway? \
 --> Simply put, a Default Gateway is a device that forwards data \
 from one network to another. And the majority of the time, this is going to be a router
