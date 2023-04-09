@@ -726,6 +726,39 @@ and hands them off to the Operating Systen kernel
 
 --> Virtual machines and Containers can be used on the same machine
 
++++ Virtualization +++
+
+--> Virtualization in computing is the process of simulating hardware and software \
+in a virtual (software) environment
+--> One server is running 3 VMs - Virtual Machines
++ Running 3 different Applications
++ Running 3 different Operating Systems
+
+--> Hypervisor
++ The software that creates and runs the virtualization
++ Allocates and controls the sharing of a machine's resources
+- Storage space
+- RAM
+- CPUs
+
+--> There are 2 types of Hypervisor
+--> Type I
++ The Hypervisor is installed on bare metal hardware
++ There is not existing Operating System or any other software on the machine
+--> Type II
++ The Hypervisor is installed and runs on top of an existing Operating System
++ The Operating System sits in between the machine and the Hypervisor
+
+--> Virtualization Benefits
++ Saves money on hardware and electricity
++ Saves money on floor space
++ Saves money on maintainance and management
++ Portability
++ Full computing capability
++ Disaster and recovery
+
++++ RAM +++
+
 +++ Cloud Computing +++
 
 +++ Fire Wall +++
