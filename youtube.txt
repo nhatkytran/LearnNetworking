@@ -757,8 +757,57 @@ in a virtual (software) environment
 + Full computing capability
 + Disaster and recovery
 
-+++ RAM +++
-
 +++ Cloud Computing +++
 
+--> Cloud Computing refers to data and applications being stored and run on the cloud \
+rather than on local computer
+
+--> The cloud is just a big building filled with computers (servers)
++ Running applicaitons
++ Storing data
++ Data processing
++ Web hosting
+
+--> Cloud Provider --> The company owns the cloud
+--> Their purpose is to sell computers as a service (Email, Productivity software, \
+Web servers, Databases, Youtube,...)
+
+--> Who are the Cloud Providers?
++ AWS --> Amazon Web Services
++ Microsoft Azure
++ Google Cloud Platform
+
+--> Why Cloud Computing?
++ Cost
++ Reliability
++ Scalability
+
+--> There are 3 types of Cloud Computing
++ IAAS - Infrastructure as a Service
++ PAAS - Platform as a Service
++ SAAS - Software as a Service (For example --> Google docs)
+
 +++ Fire Wall +++
+
+--> A firewall is a system that is designed to prevent unauthorized access from \
+entering a private network
+--> Creates a safety barrier between a private network and the public Internet
+
+--> A Firewall works by filtering the incoming network data
+--> Rules of Firewall --> Access Control List --> Customized by Network Administrator
+
+--> Types of Firewall
++ Host-based Firewall
++ Network-based Firewall
+
++++ DDOS +++
+
+--> DDOS --> Distributed Denial of Service
+--> A cyber attack on a specific server or network
+--> An intended purpose of disrupting normal operation
+--> Flooding the traget with a constant flood of traffic
+
+--> DOS - An attack from one source
+--> DDOS - An attack from multiple resources all at once
+
+--> Botnet - An army of infected computers to do a DDOS attack
