@@ -651,7 +651,80 @@ traceroute google.com
 
 +++ Proxy Server +++
 
+--> Proxy Server --> Retrieves data on the Internet on behalf of a user
+
+--> Why do we want to use a Proxy server?
++ Without using a Proxy, your public IP address is visible
++ Cached Web Page Database on Proxy Server --> Speed and Save bandwidth
++ Activity logging
+
+--> Proxy Server can not encrypt data
+--> VPN --> Virtual Private Network
++ A VPN encrypts the data that's being transferred over the Internet
++ Provides a dedicated secure tunnel between 2 points over the Internet
+
 +++ Virtual Machines and Containers +++
+
+--> The traditional way a business operates is by applications running on servers
+--> One application on one server
+--> The Operating System didn't have the capability to run multiple applications \
+securely on a single server
+--> They would have to buy a new server for new application to run on
+--> Applications couldn't take full advantage of a server's capability
+--> Running one application on one server turned out to be a waste of money
+
+--> VMS - Virtual Machines
+--> Allow multiple applications to run on a single server by simulating hardware \
+and software
+
+--> Server / Hardware --> Hypervisor --> Virtual machines --> Applications
+
+--> Hypervisor
++ Allows one machine to run multiple virtual machines
++ Allocates and controls the sharing of machine's hardware
+
+--> Virtual machines
++ Each virtual machine will have their own operating system (Window, Linux, Unix,...)
+
+--> Virtual machine disadvantages
++ Consume a lot of disk space
++ Consume a lot of RAM and CPU power from the server
++ Slow to start up
++ Requires a license for each operating system
+
+--> Containers
+--> Containers are similar to VMS - Virtual machines but the major difference is that \
++ VMS simulate the entire machine
++ Contianers only contain an application
+
+--> A container is an application that's been packaged with all the...
++ Files
++ Configurations
++ Dependencies
+...necessary for it to run
+
+--> A container is bundled with everything that it needs to run on any Computing Environment \
+without adding anything else to that computer
+
+--> The leading software that is used to create, manage, and run container is ... docker
+
+--> Server / Hardware --> Operating System --> Container Engine --> Applications
+
+--> Container Engine --> The Container Engine is what unpacks the container files \
+and hands them off to the Operating Systen kernel
+
+--> Containers
++ Smaller file size
++ Considered light weight
++ LIGHTNING fast
++ Consume less RAM and CPU power
++ Ultra portable
+
+--> Container disadvantages
++ Container must be packaged to work with the same Operating System of the server
++ If the server Operating System crashes, then the containers will go down
+
+--> Virtual machines and Containers can be used on the same machine
 
 +++ Cloud Computing +++
 
