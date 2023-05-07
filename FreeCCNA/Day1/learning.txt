@@ -1,0 +1,89 @@
++++ Part 1 - Network Devices +++
+
+--> What is a network?
+--> A computer network is a digital telecommunications network \
+which allows nodes to share resources
++ Nodes --> Router, Switch, Firewall, Server, Client
+
+--> What is Clients?
+--> A client is a device that accesses a service made available \
+by a server
+
+--> What is a server?
+--> A server is a device that provides functions or services \
+for clients
+
+--> What is a Switch?
+--> Device used to forward traffic within a LAN - Local \
+Are Network
+--> Switch has multiple interafaces or ports to plug your PCs \
+or Servers into
+
+--> Routers?
+--> Forward data over the Internet
++ have fewer network interafaces than switches
++ used to provide connectivity between LANs
+
+--> Firewalls?
+--> Network security devices that control network traffic entering \
+and exiting network
++ can placed inside or outside
++ modern features --> next generation firewalls --> including things \
+like IPS - Intrusion Prevention System
+---
+--> 2 types of firewalls
++ network firewalls --> hardware devices --> filter traffic between \
+networks
++ host-based firewalls --> software applications --> filter traffic \
+entering and exiting a host machine, like a PC
+
+*** Point to note
+
+--> The same device can be a clent in some situations, and a server \
+in other situations
+
+--> Cisco ASA stands for Adaptive Security Appliance. It is a security \
+device developed by Cisco Systems that combines firewall, antivirus, \
+intrusion prevention, and virtual private network (VPN) capabilities. \
+It provides advanced security features and protects the network from \
+internal and external threats --> Firewall
+
+--> Cisco ISR stands for Integrated Services Router. It is a line of \
+routers developed by Cisco Systems that enables multiple services to be \
+integrated into a single device. The Cisco ISR family of routers is \
+designed to provide secure, reliable, and high-performance connectivity \
+for small to medium-sized businesses, as well as enterprise branch offices
+--> Router
+
+--> Cisco Firepower is a range of network security products developed \
+by Cisco Systems that provide advanced threat detection and prevention \
+capabilities. Cisco Firepower solutions combine leading-edge hardware \
+and software technologies to provide unparalleled protection against \
+various types of cyber threats, including viruses, malware, spyware, \
+ransomware, phishing attacks, and more --> Firewall
+
+--> Cisco Catalyst is a family of Ethernet switches developed by \
+Cisco Systems. The Catalyst switches are widely used in enterprise \
+networks to provide high-speed connectivity, security, and advanced \
+features to support a variety of applications and services --> Switch
+
++++ Part 2 - Anki Flashcards +++
+
+--> Anki --> Example of SRS --> Spaced Repetition Software
+
++++ Part 3 - Packet Tracer +++
+
+--> In the world of IT, "doing labs" or "labbing" refers to hands-on practice \
+with the technology being learned
+--> CCNA --> labbing means practicing configuring Cisco routers and switches
+
+--> ISR --> Integrated Services Router
+--> A line of Cisco Routers
++ 2911 is a particular model in that line
+
+--> Catalyst is the name of a line of Cisco switch models
++ 2960 is one model within that line
+
+--> ASA --> Adaptive Security Appliance
+--> A series of firewalls made by Cisco, and ASA5505 is a particular model \
+within the ASA line

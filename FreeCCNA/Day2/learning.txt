@@ -1,0 +1,113 @@
++++ Interfaces and Cables +++
+
+--> RJ45 --> Registered Jack
+--> The RJ45 connector is used on the end of a copper Ethernet cable
+
+--> What is Ethernet?
+--> Ethernet is a collection of network protocols/standards
++ For example: Ethernet cable standards --> types of cabling is defined \
+Ethernet standards
+
+--> Network Protocols
+
+--> Bits and Bytes
+--> Connections between devices in a network operate at a set speed
++ These speeds are measured in pits per second
+--> Bit --> 0 and 1 --> Binary code
+8 bits = 1 byte
+--> Speed is measured in bits per second (Kbps, Mbps, Gbps, etc). not bytes \
+per second
++ Data on a hard drive is measured in bytes
+---
+- 1 kilobit (Kb) = 1,000 bits
+- 1 megabit (Mb) = 1,000,000 bits
+- 1 gigabit (Gb) = 1,000,000,000 bits
+- 1 terabit (Tb) = 1,000,000,000,000 bits
+---
+
+--> Ethernet Standards
++ Defined in the IEEE 802.3 standard in 1983
++ IEEE --> Institute of Electrical and Electronic Engineers
+++ 10BASE-T --> BASE (Baseband signaling) --> T (Twisted pair)
+
+--> UTP Cables
++ Unshielded Twisted Pair Cables
++ Used in Ethernet Standards
+
+--> Unshielded Twisted Pair
++ Unshielded --> the wires have no metalic shield --> prevent vulnerabilities \
+from Electrical Interference
++ Twisted Pair --> 4 pairs of wires twisted together --> prevent vulnerabilities \
+from Electromagnetic Interference or EMI
+
+--> Not all the Ethernet standards use all 8 wires
++ 10BASE-T, 100BASE-T --> 2 pairs (4 wires)
++ 1000BASE-T, 10GBASE-T --> 4 pairs (8 wires)
+
+--> UTP Cables (10BASE-T, 100BASE-T)
++ The network interface card on a PC or server transmits data on \
+pins 1 and 2, and on a switch receive data on pins 1 and 2
++ Transmit (Tx)
++ Receive (Rx)
+
+--> A switch transmits data on pins 3 and 6, PC or server receives \
+data on pins 3 and 6
+
+--> Full-Duplex Transmission
+--> Full-Duplex Transmission means both devices can receive and \
+send data at the same time
++ There is no problem like collisions will occur because they use \
+separate wires to transmit and receive data
+
+*** Point to note --> Ethernet uses Full-Duplex Transmission
++ So the two devices can send data at the same time with no issues
+
++ PC, Server, Router --> Tx 1 & 2; Rx 3 & 6
++ Switch --> Tx 3 & 6; Rx 1 & 2
+--> Straight-through cable
++ Connects pin1 to pin1, pin2 to pin2, pin3 to pin3, etc.
+
+--> A copper Ethernet cable has two RJ-45 connectors, one on each end
+
+--> How about connecting 2 PCs or 2 Routers?
+--> A crossover cable
+
+--> Auto MDI-X allows devices to automatically detect which pins \
+their neighbor is transmiting data on, and then adjust which pins \
+they use to transmit and receive data
+
+--> UTP Cables (1000BASE-T and 10GBASE-T)
+--> In addition to using all four pairs of wires, in 1000BASE-T and \
+10GBASE-T, each pair is bidirectional
+
+--> Bidirectional means each pair isn't dedicated specifically \
+to transmiting data or receiving data
+
+--> Fiber-Optic Connections
+
+--> SFP Transceiver --> Small Form-Factor Pluggable
+
+--> Fiber Optic cable
++ Sends light over glass fibers
++ 2 connectors on each end, one connector to transmit data, and one \
+to receive data
+
+*** Point to note
+--> The copper UTP cables used separate wire pairs within the cable \
+to transmit and receive data
+--> The Fiber-Optic cables instead use separate cables to transmit and \
+receive data
+
+--> Fiber Optic cable
++ 1. the fiberglass core itself
+Light is transmitted down this core to transmit data from one device \
+to another
++ 2. cladding that reflects light
++ 3. a protective buffer
++ 4. the outer jacket of the cable
+
+--> Types of Fiber Optic cable
++ Single-mode fiber
++ Multimode fiber
+
+--> Multimode fiber

@@ -1,0 +1,92 @@
++++ OSI Model & TCP/IP Suite +++
+
+--> What is a networking model?
++ protocols --> A set of rules defining how network devices \
+and software should work --> logical
+--> Netowrking models categorize and provide structure for \
+networking protocols and standard
+
+--> Networks without standardization?
+--> The OSI model attempts at standardizing network communications
+
+--> OSI Model
+--> OSI Model - "Open Systems Interconnection" Model
++ Open --> means that it is an open standard, not a proprietary \
+model developed and used by an individual company
++ Layer 1 --> Physical layer --> The standards for cables and \
+interfaces
+
+--> OSI --> International Organization and Standardization
+
+--> Layer 7 --> Application Layer
++ Encapsulation --> The data is processed through the OSI stack, \
+each layer adding something the original data
++ De-Encapsulation
+--> Both Encapsulation and De-Encapsulation processes are examples \
+of "Adjacent-layer Interaction" --> Interaction between the different \
+layers of the OSI model
+--> The communication between the application layers of the two \
+different systems is called "Same-layer Interaction"
+
+--> Same-layer Interaction between application layers is what allows \
+the application layer to perform its functions of identifying \
+communication partners, synchronizing communications, etc.
+
+--> Layer 6 --> Presentation Layer
++ The Presentation Layer translates data to the approriate format
+
+--> Layer 5 --> Session Layer
++ Establish a session between two devices and ensures that the data \
+is exchanged between them securely, reliably, and efficiently
+
+--> OSI Model --> The Upper Layers - 5, 6, 7
+
++ Data prepared at the top 3 layers is then sent over to the bottom \
+4 layers, which actually do the work of sending data over the network
++ After the top 3 layers hand data over to the bottom 4 layers. The \
+next step before sending data is that Layer 4, the Transport Layer, \
+adds a header in front of the data
+
+--> Layer 7, 6, 5 --> Data is ready
++ then data is sent to Layer 4
+
+[Data][L4 Header]
+
+---
+
+--> Layer 4 - Transport Layer
++ ([Unit of Data][Layer 4 Header]) --> Segment
++ Provides host-to-host communication services by ensuring the accurate \
+and reliable transmission of data between hosts on a network
+
+--> Layer 3 - Network Layer
++ ([Unit of Data][Layer 4 Header][Layer 3 Header]) --> Packet
++ Layer 3 - Router --> Provide Logical address and pick the best path
+
+--> Layer 2 - Data Link Layer
++ ([Layer 2 Trailer][Unit of Data][Layer 4 Header][Layer 3 Header][Layer 2 Header])
+--> Frame
+
+--> Layer 1 - Physical Layer
+
+---
+Data --> Segment --> Packet --> Frame
+DSPF --> Damn Squirrels Play Frisbee
+
+--> PDUs --> Protocol Data Units
++ Segments is a term for Layer 4 PDUs - Protocol Data Units
+
++++ TCP/IP +++
+All Time In LOL
++ Application
++ Transport
++ Internet
++ Link
+
+--> Process to Process --> Application to Application --> Skype to Skype
+--> Host to Host --> Router to Router
+
+--> Adjacent Layer Interaction --> Encapsulation and De-Encapsulation
+--> Same Layer Interation --> Host-to-Host, Process-to-Process
+
+--> Encapsulation and De-Encapsulation starts from Layer 4 - Transport Layer
