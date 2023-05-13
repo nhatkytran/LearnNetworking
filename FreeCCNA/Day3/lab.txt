@@ -1,0 +1,12 @@
+--> STP --> Spanning Tree Protocol --> Layer 2 Protocol
+
+--> OSPF --> Layer 3 Protocol --> Discover the best path \
+to different network
+
+--> PC using a protocol called DHCP to automatically \
+receive IP address
+--> DHCP is a Layer 7 protocol
+
+ipconfig
+ipconfig /release
+ipconfig /renew

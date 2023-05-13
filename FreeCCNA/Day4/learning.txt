@@ -1,0 +1,138 @@
++++ Intro to the CLI +++
+
+--> Cisco IOS CLI
+
+--> Cisco IOS
++ Operating systems used on Cisco Devices (like Window, MacOS)
+
+--> CLI
++ Command-line Interface --> Used to configure Cisco Devices
+--> GUI --> Graphical User Interface
+
+--> How to connect to a Cisco Device?
+--> Console Port
+PC --> Console Port --> Cisco Device
+
+--> Connect via a Console Port to configure Cisco device
+
+--> Console Port
++ RJ45
++ USB Mini-B
+
+--> Cable --> DB9 Connector + RJ45 --> Rollover cable
++ 8 pins on each end --> 1-8, 2-7, 3-6, 4-5, 5-4, 6-3, 7-2, 8-1
+--> A type of Console cable used to connect a computer's serial port \
+to the console port of a networking device using a command-line interface (CLI)
+
+--> Serial Communication
+--> Data is transmitted one bit at a time over a single communication line or interface
++ Key board connects to PC
+
+--> Parallel Communication
+--> Data is transmitted multiple bits at a time over communication lines or interfaces
++ PC connects to Printer
+
+--> Console Communication
+--> Allows computer to establish a direct connection to the management interface \
+of the network device, allowing user to execute commands on the device to configure \
+its settings
++ Laptop connects to a Switch using Rollover Cable
+
+--> Terminal Emulator (PuTTy)
+
++ Session --> Serial --> Open: Connects to the CLI
++ Connection --> SSH --> Serial: Default settings of Cisco Devices
+
++ Speed (baud) --> baud rate: 9600
+--> Data is transmitted at a rate 9600 bits per second (bps)
+--> Serial communication like Switch and Router
+--> If Baud rate mismatched --> data transmission may fail
+
++ Data bits: 8
++ Stop bits: 1
+For each 8 bits of data, 1 stop bits is sent --> mark the end of the 8 bits
+
++ Parity: None --> Used to detect errors
++ Flow Control: None --> Control the flow of data from transmitter to receiver
+
+--> Cisco's defaults
++ Speed of 9600 bits per second
++ 8 data bits
++ 1 stop bits
++ No Parity
++ No Flow control
+
+--> Cisco IOS CLI
+no
+Press ENTER
+
+--> User EXEC Mode --> user mode
+ROUTER>
++ hostname of the device
++ > --> user EXEC mode
+
++ limied, can look at something, can not make any changes to the configuartion
+
+--> Privileged EXEC Mode
+ROUTER>enable
+ROUTER# (# pound, hash sign)
++ View configuration, restart the device,...
++ Can not change the configuration, but can change the time on the device, save \
+the configuration file,...
+
+--> See all commands
++ ROUTER>?
++ ROUTER#?
+
+--> Question mark
++ All cammands
++ Full word
++ Any option to provide
+
+--> Cisco IOS CLI shortcuts
++ Press Tab --> en --> enable --> CLI automatically complete the word
+(Ambiguous command: "e")
++ Display all the possible commands with e --> ROUTER>e?
+
+--> Global Configuration Mode
+ROUTER>enable
+ROUTER#configure terminal
+ROUTER(config)#
+
+--> user EXEC mode --> privileged EXEC mode --> global configuration mode
+
+--> enable password command
++ protect privileged EXEC mode with a password
+? --> words
+ ? --> Are there any option to provide
+<cr> --> There's no option
+enable password <PASSWORD> --> password is case-sensitive
+exit
+
+--> running-config / startup-config
+ROUTER#show running-config
+ROUTER#show startup-config
++ Default configuation
+
+--> Saving the configuration
++ There are 3 ways to save the running-configuration to make it the start-up \
+configuration
+
+--> service password-encryption command
++ the number 7 means it is using Cisco's proprietary encryption algorithm
+
+--> enable secret command
+enable secret <password>
+ROUTER(config)#enable secret Cisco
+ROUTER(config)#do show running-config
+--> Instead running show running-config in Privileged EXEC mode, use 'do' cammand
+'do' <--> 'run'
++ Help run privileged-exec-level-command from global configuration mode
+
++ the number 5 --> MD5 Encryption
+
+enable secret > enable password (both can exists together)
+service password-encryption has NO effect on the enable secret
+
+--> canceling / deleting commands
++ typing 'no' in front of the command
