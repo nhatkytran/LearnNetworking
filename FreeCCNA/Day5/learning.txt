@@ -1,0 +1,139 @@
++++ Ehternet LAN Switching (Part 1) +++
+
+--> Layer 1 - Physical Layer
++ Define physical characteristics of the medium \
+used to transfer data between devices
+(voltage levels, maximum transmission distances, physical connectors,...)
++ Bits are converted into electrical (for wired connections) \
+or radio (for wireless connections) signals
++ Cables, pin layouts,...
+
+--> Layer 2 - Data Link Layer
++ Provide node-to-node connectivity and data transfer
+(PC to Switch, Switch to Switch, Router to Router)
++ Defines how data is formatted for transmission over \
+a physical medium
++ Detects, (possibly) corrects Physical Layer errors
++ MAC Address
++ Switch
+
+--> Ethernet involves Layer 1 and Layer 2 of the OSI Model
+
+--> LANs (Local Area Networks)
++ Basically, it's a network contained within a relatively \
+small area, like an office floor or home network
++ Routers are used to connect separate LANs
++ Switches do not separate LANs but can be used to expand \
+an existing LAN
+
+*** Point to note
+--> ETHERNET INVOLVES LAYER 1 AND LAYER 2 OF THE OSI MODEL
+
+--> PDUs --> Protocol Data Units
+(Ethernet Segment, Ethernet Packet, Ethernet Frame,...)
+
+--> Ethernet Frame
+[Ethernet Header][Packet][Ethernet Trailer]
+
+--> Ethernet Frame Header
++ Preamble
++ SFD --> Start Frame Delimiter
+--> Preamble and SFP used for synchronization and to allow \
+the receiving device to be prepared to receive the rest of \
+the data in the frame
++ Destination --> The Layer 2 address to which the frame is \
+being sent
++ Source --> The Layer 2 address of the device which sent \
+the frame
++ Type --> The Layer 3 Protocol used in the Encapsulated Packet, \
+always is Internet Protocol (IPv4 or IPv6)
+(sometimes is a length field - length of the encapsulated data, \
+based on the version of the Ethernet)
+
+--> Ethernet Trailer
++ FCS --> Frame Check Sequence --> Used by the receiving device \
+to detect any errors that might have occurred in transmission
+
+--> Preamble & SFD (Picture for more details)
+
+--> Destination & Source (Picture for more details)
++ Indicate sending device and receiving device using MAC Address
++ MAC Address --> Media Access Control Address (6 bytes - 48 bits)
+
+--> Type | Length (Picture for more details)
++ 2 bytes (16 bits) field
++ Value: <= 1500 --> indicates the LENGTH of the encapsulated \
+packet (in bytes)
++ Value: >= 1536 --> indicates the TYPE of the encapsulated packet
+(IPv4 or IPv6, LENGTH is determined via other methods)
+
+PSDST --> Pets Small Duck Seven Times
++ Preamble --> 7 bytes --> 10101010 * 7 --> Synchronization
++ SFD --> Start Frame Delimiter --> 1 bytes --> 10101011
++ Destination --> MAC Address --> 6 bytes
++ Source --> MAC Address --> 6 bytes
++ Type | Length --> 2 bytes
+
+--> Ethernet Trailer --> FCS --> Frame Check Sequence
++ 4 bytes --> 32 bits
++ detects corrupted data using CRC algorithm over the received data
++ CRC --> Cyclic Redundancy Check
+
+*** Ethernet Fame header + Ethernet Frame Trailer --> 26 bytes
+
+--> MAC Address (Picture for more details)
+
+--> Decimal (Picture for more details)
++ 0 --> 0 value of 1
++ 11 --> 1 value of 10, 1 value of 1
++ 111 --> 1 value of 100, 1 value of 10, 1 value of 1
+
+--> Hexadecimal (Picture for more details)
++ 0, 1, 2, ..., 8, 9, A, B, ..., E, F
++ A --> 10
++ F --> 15
+--> 16 --> 10 --> 1 value of 16 and 0 value of 1
+--> 17 --> 11 --> 1 value of 16 and 1 value of 1
+--> 26 --> 1A --> 1 value of 16 and 10 value of 1
+--> 31 --> 1F --> 1 value of 16 and 15 value of 1
+
+--> MAC Addresses (Picture for more details)
++ The former 3 bytes --> The maker --> OUI
++ The latter 3 bytes --> Device
+
+--> Unicast frames
+Dest: .0002
+Src: .0001
++ Unicast frame --> A frame destined for a single target
+
+--> MAC Address Table / Dynamic [learned] MAC Addresses
++ MAC Address table of Switch learns MAC Address (Dynamic MAC Address)
++ Dynamic MAC Address or Dynamic learned MAC Address --> Switch learn \
+it itself --> We don't configure it manually
++ Switch look at the Src MAC Address
+
+--> Unknown Unicast Frame and Flooding
++++ Unicast Fame --> A fame for which a Switch doesn't have \
+an entry in its MAC address table
++++ Flood --> Flood means to forward the frame out of \
+All of its interfaces, except the one it received the frame on
+
+--> Known Unicast Frame and Forwarding
++++ Known Unicast Frame --> the destination is already in its \
+MAC Address table
+
+*** Point to note
+--> On Cisco switches, Dynamic MAC Addresses are removed from \
+the MAC Address table after 5 minutes of inactivity
+
+---
+Switch receives Unicast frame
+
++ Look at Src to learn MAC Address
++ MAC Address table --> Dynamic [learned] MAC Address (MAC, Interface)
++ Remove after 5 minutes of inactivity
+
++ Look at Dest
++ Unknown Unicast Frame --> Flooding
++ Know Unicast Frame --> Forwarding
+---
