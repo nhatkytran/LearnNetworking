@@ -1,0 +1,104 @@
++++ Ethernet LAN Switching (Part 2) +++
+
+--> Ethernet Frame (EthernetFrame.png)
++ Preamble + SFD --> usually not considered part of the Ethernet header
++ The size of the Ethernet header + trailer is 18 bytes (6 + 6 + 2 + 4)
+
+--> Padding bytes (EthernetFrameDetails.png)
++ Preamble and SFD might not be included as part of the Ethernet header
++ but they are included with every Ethernet fame
++ The minimum size of the fame is 64 bytes (doesn't include Preamble and SFD)
++ Minimum payload is 46 bytes (64 - 18), and padding will be added \
+if the payload is less than that
+
+--> When a device sends some data to another device, it doesn't just include \
+a source and destination MAC Address
+--> Encapsulated with that frame is an Internet Protocol, known as IP Packet, \
+and that IP Packet includes a Source and Destination IP Address
+
+--> PC1 wanna send Ethernet Frame to PC2 --> PC1 needs to learn PC2 MAC Adress
+--> ARP (Address Resolution Protocol) ((EthernetFrame1.png))
+
+--> ARP (ARP.png)
+Consists of 2 messages:
++ ARP Request --> sent by the device that wants to know the MAC Address \
+of the other device
++ ARP Reply --> which is sent to inform the requesting device of the MAC Address
+
+--> In this example, PC1 would send the ARP Request, and PC2 would send \
+the ARP reply
++ ARP Request --> broadcast --> sent to all hosts on the network
++ ARP Reply --> unicast --> sent only to one host (the host that sent the request)
+
+--> ARP Request (ARPRequest.png)
++ FFFF.FFFF.FFFF --> broadcast MAC Address --> used when a device wants to send \
+Ethernet Frames to all other devices on the local network
+
+*** Point to note
+Broadcast Frame (Dest MAC Address --> FFFF.FFFF.FFFF)
+Unicast Frame --> knows Dest MAC Address
+
+--> ARP Reply (ARPReply.png)
+
+--> ARP Table
++ Store these IP Address to MAC Address associations
+arp -a
+
+--> GNS3
++ Packet Tracer is a network simulator --> piece of software designed to simulate \
+the operation of a real network
++ GNS3 --> Network emulator software --> Run actual Cisco IOS software, so these \
+are real Cisco switches running virtually
++ GNS3 integrates with another piece of software called wireshark
+
+--> Broadcast MAC Address --> FFFF.FFFF.FFFF
+--> Send ARP Request and get ARP Reply
+--> PC1 then learns PC2's MAC Address --> Add it to its ARP Table
+--> PC1 uses information in the ARP table to add the Destination MAC Address \
+to the ping it wants to send
+
+--> Ping
++ Test reachability and time
++ 2 messages: (ICMP - Internet Control Message Protocol)
+  ICMP Echo Request
+  ICMP Echo Reply
++ ping (ip-address)
+--> Ping doesn't broadcast ICMP Echo Request --> Need MAC Address --> ARP is sent first
+
+--> Ping
++ By default, send 5 ping ICMP Echos, each one is 100 bytes
+. --> failed ping
+! --> successful ping
++ timeout
++ success rate
++ round-trip min/avg/max
+--> Why did that first ping fail? --> ARP
++ PC1 didn't know the destination MAC Address, so it had to use ARP, and in that time \
+the first ping failed
++ After PC1 learned PC3's MAC Address --> the pings succeeded
+
+--> arp -a in MacOS, Linux,...
+--> In Cisco IOS: show arp --> from Privileged EXEC Mode
+
+--> Wireshark
++ Packet captures --> Analyze the contents of network traffic
+
+*** Point to note
+Basically, if device A wants to send traffic to device B, which is on the same \
+network, device A first has to use ARP to learn B's MAC Address, and then it \
+can send traffic to device B
+
+--> ARP Table
+Internet Address, MAC Address, Type
+
+--> MAC Address Table
+show mac address-table
+VLAN (1), Mac Address, Type, Ports
+
+--> Clearing the MAC Address Table --> Aging
+clear mac address-table dynamic
+clear mac address-table dynamic address < address >
+clear mac address-table dynamic interface < interface >
+
+--> Padding Bytes --> 00000000
++ Hexadecimal --> 1 hex --> 4 bits
